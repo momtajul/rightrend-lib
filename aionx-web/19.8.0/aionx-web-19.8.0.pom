@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.company</groupId>
+        <artifactId>aionx</artifactId>
+        <version>19.8.0</version>
+    </parent>
+
+    <artifactId>aionx-web</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>servlet</module>
+        <module>security-web</module>
+        <module>security-enterprise</module>
+        <module>app-shell</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <skipTests>true</skipTests>
+
+        <persistence.api.version>2.2</persistence.api.version>
+        <surefire.version>2.22.2</surefire.version>
+        <framework.version>19.8.0</framework.version>
+
+        <!--Junit-->
+        <junit.jupiter.version>5.5.1</junit.jupiter.version>
+        <junit.platform.version>1.5.1</junit.platform.version>
+        <junit.platform.version>1.5.1</junit.platform.version>
+
+        <maven-compiler.version>3.8.1</maven-compiler.version>
+    </properties>
+
+    <dependencies>
+        <!-- Test -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-testkit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.jupiter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.platform</groupId>
+                <artifactId>junit-platform-testkit</artifactId>
+                <version>${junit.platform.version}</version>
+            </dependency>
+            <!-- Import Common Annotations API (JSR-250)-->
+            <dependency>
+                <groupId>javax.annotation</groupId>
+                <artifactId>javax.annotation-api</artifactId>
+                <version>1.3.2</version>
+            </dependency>
+
+            <!-- Import EJB API. -->
+            <!--dependency>
+                <groupId>javax.ejb</groupId>
+                <artifactId>javax.ejb-api</artifactId>
+                <version>3.2.2</version>
+            </dependency-->
+
+            <!-- Import CDI API -->
+            <dependency>
+                <groupId>javax.enterprise</groupId>
+                <artifactId>cdi-api</artifactId>
+                <version>2.0</version>
+            </dependency>
+
+            <!-- Import JSON Bind API-->
+            <dependency>
+                <groupId>javax.json.bind</groupId>
+                <artifactId>javax.json.bind-api</artifactId>
+                <version>1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>2.3.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>2.3.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>2.3.0</version>
+            </dependency>
+
+            <!-- Import JPA Hibernate -->
+
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>javax.ws.rs-api</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>javax.persistence-api</artifactId>
+                <version>2.2</version>
+            </dependency>
+
+            <!-- Import Postgresql Driver -->
+            <!--dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.2.6</version>
+            </dependency-->
+
+            <!-- Test -->
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-client</artifactId>
+                <version>3.7.0.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.security.enterprise</groupId>
+                <artifactId>javax.security.enterprise-api</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>8.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.omnifaces</groupId>
+                <artifactId>omnifaces</artifactId>
+                <version>3.3</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.transaction</groupId>
+                <artifactId>jta</artifactId>
+                <version>1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.weld.se</groupId>
+                <artifactId>weld-se-core</artifactId>
+                <version>3.1.2.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.btm</groupId>
+                <artifactId>btm</artifactId>
+                <version>2.1.4</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>2.11.1</version>
+            </dependency>
+
+            <!-- JWT API -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>0.10.7</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>0.10.7</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>0.10.7</version>
+                <scope>runtime</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-help-plugin</artifactId>
+                    <version>3.2.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${surefire.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+</project>

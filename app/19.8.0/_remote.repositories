@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Apr 20 21:09:24 BDT 2020
+app-19.8.0.war>=
+app-19.8.0.pom>=

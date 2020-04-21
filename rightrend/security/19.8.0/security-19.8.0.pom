@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.company.rightrend</groupId>
+        <artifactId>backend</artifactId>
+        <version>19.8.0</version>
+    </parent>
+
+    <artifactId>security</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <security.version>19.8.0</security.version>
+    </properties>
+
+    <modules>
+        <module>security-service</module>
+        <module>security-server</module>
+        <!--module>security-iam</module-->
+    </modules>
+
+</project>

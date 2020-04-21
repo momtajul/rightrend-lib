@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.company</groupId>
+        <artifactId>aion</artifactId>
+        <version>19.8.0</version>
+    </parent>
+    <artifactId>aionx-grpc</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- Import Projects Related API and Impl-->
+        <dependency>
+            <groupId>com.company</groupId>
+            <artifactId>aion-api</artifactId>
+            <version>${aion.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-api</artifactId>
+            <version>${grpc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-cli</groupId>
+            <artifactId>commons-cli</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.api.grpc</groupId>
+            <artifactId>proto-google-common-protos</artifactId>
+            <version>1.17.0</version>
+        </dependency>
+    </dependencies>
+</project>

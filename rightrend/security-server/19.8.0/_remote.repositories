@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Apr 15 18:22:41 BDT 2020
+security-server-19.8.0.jar>=
+security-server-19.8.0.pom>=

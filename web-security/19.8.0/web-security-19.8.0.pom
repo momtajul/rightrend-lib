@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.company</groupId>
+        <artifactId>aionx-web</artifactId>
+        <version>19.8.0</version>
+    </parent>
+
+    <artifactId>web-security</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.company</groupId>
+            <artifactId>aion-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+        </dependency>
+        <!-- Security API -->
+        <dependency>
+            <groupId>javax.security.enterprise</groupId>
+            <artifactId>javax.security.enterprise-api</artifactId>
+        </dependency>
+
+        <!-- Soteria, without Api -->
+        <dependency>
+            <groupId>org.glassfish.soteria</groupId>
+            <artifactId>javax.security.enterprise</artifactId>
+            <version>1.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.security.enterprise</groupId>
+                    <artifactId>javax.security.enterprise-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Omnifaces, develop JSF never easier without Omnifaces -->
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnifaces</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

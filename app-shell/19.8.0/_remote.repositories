@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Apr 21 03:34:04 BDT 2020
+app-shell-19.8.0.jar>=
+app-shell-19.8.0.pom>=

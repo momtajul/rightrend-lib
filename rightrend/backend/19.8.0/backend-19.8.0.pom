@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.company</groupId>
+        <artifactId>company-dependency</artifactId>
+        <version>19.8.0</version>
+        <relativePath>../dependency/pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.company.rightrend</groupId>
+    <artifactId>backend</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>security</module>
+        <module>portfolio</module>
+        <module>accounting</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.company</groupId>
+            <artifactId>aion-api</artifactId>
+        </dependency>
+        <!-- Test -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-testkit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.company.rightrend</groupId>
+                <artifactId>rightrend-api</artifactId>
+                <version>19.8.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
